@@ -1,4 +1,5 @@
 # import anytree
+from branch import branchAndBound
 
 
 def sum_distances(distances):
@@ -110,7 +111,9 @@ def main():
     else:
         tree.append([nodes[0], nodes[0] + nodes[1], distances[0][0]])
         tree.append([nodes[1], nodes[0] + nodes[1], distances[0][1]])
-    print(tree)
+
+    branchAndBound(tree)
+    # print(len(tree))
 
 
 main()
